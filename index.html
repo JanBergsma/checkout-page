@@ -13,10 +13,111 @@
       href="img/devchallenges.png"
       type="image/x-icon" />
     <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet" />
+    <link
       rel="stylesheet"
       href="style.css" />
     <title>Checkout Page</title>
   </head>
 
-  <body> </body>
+  <body>
+    <main class="main">
+      <h1 class="header">Checkout</h1>
+      <form
+        class="form"
+        action="">
+        <fieldset class="form__fieldset-summary">
+          <label
+            for="article_1"
+            class="form__label--with-picture">
+            <img
+              src="img/photo1.png"
+              alt=""
+              class="form__article-image" />
+            <div class="form__article-info">
+              <div class="form__article-info-header-and-price">
+                <h2 class="form__article-name">Vintage Backbag</h2>
+                <div class="form__prices">
+                  <p class="form__price--special"> $54.99 </p>
+                  <p class="form__price--normal"> $94.99 </p>
+                </div>
+              </div>
+              <div class="spinner">
+                <button class="spinner__button spinner__button-min"> - </button>
+                <input
+                  type="number"
+                  name="article_1"
+                  id="article_1"
+                  class="spinner__input"
+                  min="0"
+                  step="1"
+                  value="1" />
+                <button class="spinner__button spinner__button-plus">
+                  +
+                </button>
+              </div>
+            </div>
+          </label>
+          <label
+            for="article_2"
+            class="form__label--with-picture">
+            <img
+              src="img/photo2.png"
+              alt=""
+              class="form__article-image" />
+            <div class="form__article-info">
+              <div class="form__article-info-header-and-price">
+                <h2 class="form__article-name">Levi Shoes</h2>
+                <div class="form__prices">
+                  <p class="form__price--special">$74.99</p>
+                  <p class="form__price--normal">$124.99 </p>
+                </div>
+              </div>
+              <div class="spinner">
+                <button class="spinner__button spinner__button-min"> - </button>
+                <input
+                  type="number"
+                  name="article_2"
+                  id="article_2"
+                  class="spinner__input"
+                  min="0"
+                  step="1"
+                  value="1" />
+                <button class="spinner__button spinner__button-plus">
+                  +
+                </button>
+              </div>
+            </div>
+          </label>
+          <div class="form__totals">
+            <div class="form__total">
+              <h3 class="form__total-header">Shipping</h3>
+              <div
+                id="shipping-cost"
+                class="form__total-price"
+                >$19.00</div
+              >
+            </div>
+            <div class="form__total">
+              <h3 class="form__total-header">Total</h3>
+              <div
+                id="total-price"
+                class="form__total-price"
+                >$148.98</div
+              >
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
