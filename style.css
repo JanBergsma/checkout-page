@@ -5,6 +5,7 @@
   --primary-color: #4e5150;
   --secondary-color: #4e5150;
   --alert-color: #f2994a;
+  --invalid-color: #e71313;
   --spinner-buton-background: #e0e0e0;
   --totals-seperarion-line: #bdbdbd;
 }
@@ -127,4 +128,89 @@ body {
   padding-top: 0.4rem;
   height: 2.5rem;
   font-size: 0.875rem;
+}
+
+.information {
+  margin-top: 3rem;
+  border-style: none;
+}
+
+.information__container {
+  padding-top: 0.8rem;
+}
+
+.information__legend {
+  font-size: 0.875rem;
+}
+
+.information__header {
+  font-size: 0.625rem;
+}
+
+.information__input-container {
+  display: flex;
+  margin-top: 0.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.4rem 0.8rem;
+  color: var(--border-color);
+}
+
+.information__icon {
+  margin-right: 0.4rem;
+  min-width: 1.6rem;
+}
+
+.information__input {
+  border-style: none;
+  width: 100%;
+}
+
+.information__input:focus {
+  background: var(--background-secondary-color);
+}
+
+.information__input:invalid {
+  border: 2px solid var(--alarm-color);
+}
+
+.information__two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.information__checkbox-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.information__checkbox {
+  margin-right: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.information--btn {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 1rem;
+  border-style: none;
+}
+
+.information__btn {
+  border-style: none;
+  border-radius: 12px;
+  background: var(--alert-color);
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer {
+  margin-top: 6rem;
+  color: var(--spinner-buton-background);
+  text-align: center;
 }

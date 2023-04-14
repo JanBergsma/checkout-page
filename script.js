@@ -52,3 +52,5 @@ function updateTotalPrice() {
     updateTotalPrice();
   }),
 );
+
+// const form =

@@ -23,6 +23,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
       rel="stylesheet" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <link
       rel="stylesheet"
       href="style.css" />
     <title>Checkout Page</title>
@@ -32,8 +35,8 @@
     <main class="main">
       <h1 class="header">Checkout</h1>
       <form
-        class="form"
-        action="">
+        id="form"
+        class="form">
         <fieldset class="form__fieldset-summary">
           <label
             for="article_1"
@@ -116,7 +119,161 @@
             </div>
           </div>
         </fieldset>
+        <fieldset class="information">
+          <legend class="information__legend">Contact infomation</legend>
+          <div class="information__container">
+            <label
+              class="information__label"
+              for="information__email">
+              <span class="information__header">E-mail</span>
+            </label>
+            <div class="information__input-container">
+              <i class="material-icons information__icon"> mail </i>
+              <input
+                type="email"
+                name="information__email"
+                id="information__email"
+                class="information__input"
+                placeholder="Enter your email..."
+                required />
+            </div>
+          </div>
+          <div class="information__container">
+            <label
+              class="information__label"
+              for="information__phone">
+              <span class="information__header">Phone</span>
+            </label>
+            <div class="information__input-container">
+              <i class="material-icons information__icon"> phone </i>
+              <input
+                type="tel"
+                name="information__phone"
+                id="information__phone"
+                class="information__input"
+                placeholder="Enter your phone..."
+                pattern="^(?=^.{10,11}$)0\d*-?\d*$"
+                required />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="information">
+          <legend class="information__legend">Shipping address</legend>
+          <div class="information__container">
+            <label
+              class="information__label"
+              for="information__name">
+              <span class="information__header">Full name</span>
+            </label>
+            <div class="information__input-container">
+              <i class="material-icons information__icon">
+                <span class="material-symbols-outlined"> account_circle </span>
+              </i>
+              <input
+                type="text"
+                name="information__name"
+                id="information__name"
+                class="information__input"
+                placeholder="Enter your name..."
+                required />
+            </div>
+          </div>
+          <div class="information__container">
+            <label
+              class="information__label"
+              for="information__adress">
+              <span class="information__header">Address</span>
+            </label>
+            <div class="information__input-container">
+              <i class="material-icons information__icon">home</i>
+              <input
+                type="text"
+                name="information__adress"
+                id="information__adress"
+                class="information__input"
+                placeholder="Enter your adress..."
+                required />
+            </div>
+          </div>
+          <div class="information__container">
+            <label
+              class="information__label"
+              for="information__city">
+              <span class="information__header">City</span>
+            </label>
+            <div class="information__input-container">
+              <i class="material-icons information__icon">location_city</i>
+              <input
+                type="text"
+                name="information__city"
+                id="information__city"
+                class="information__input"
+                placeholder="Your city..."
+                required />
+            </div>
+          </div>
+          <div class="information__two-columns">
+            <div class="information__container">
+              <label
+                class="information__label"
+                for="information__country">
+                <span class="information__header">Country</span>
+              </label>
+              <div class="information__input-container">
+                <i class="material-icons information__icon">flag</i>
+                <select
+                  name="information__country"
+                  id="information__country"
+                  class="information__input"
+                  placeholder="Your country..."
+                  required>
+                  <option value="Netherlands">Netherlands</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Belgium">Belgium</option>
+                </select>
+              </div>
+            </div>
+            <div class="information__container">
+              <label
+                class="information__label"
+                for="information__postalcode">
+                <span class="information__header">Postal code</span>
+              </label>
+              <div class="information__input-container">
+                <i class="material-icons information__icon"
+                  >markunread_mailbox</i
+                >
+                <input
+                  type="text"
+                  name="information__postalcode"
+                  id="information__postalcode"
+                  class="information__input"
+                  placeholder="Your postal code..."
+                  required />
+              </div>
+            </div>
+          </div>
+          <div class="information__checkbox-container">
+            <input
+              type="checkbox"
+              name="information__save"
+              id="information__save"
+              class="information__checkbox" />
+            <label
+              class="information__label information__header"
+              for="information__save">
+              Save this information for next time
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="information--btn">
+          <input
+            type="submit"
+            value="Continue"
+            class="information__btn" />
+        </fieldset>
       </form>
+      <footer class="footer">created by username - devChallenges.io</footer>
     </main>
     <script src="script.js"></script>
   </body>
