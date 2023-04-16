@@ -252,3 +252,63 @@ body {
   color: var(--spinner-buton-background);
   text-align: center;
 }
+
+@media screen and (min-width: 680px) {
+  body {
+    padding: 1rem 4rem;
+  }
+
+  .header {
+    font-size: 2.25rem;
+  }
+
+  .form {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .form__article-name,
+  .form__price--special,
+  .form__total-header {
+    font-size: 1rem;
+  }
+
+  .form__price--normal {
+    font-size: 0.75rem;
+  }
+
+  .information__legend {
+    font-size: 1.125rem;
+  }
+
+  .information__header {
+    font-size: 0.75rem;
+  }
+
+  .form__fieldset-summary {
+    grid-row: 1/ 3;
+    grid-column: 2/3;
+    width: 80%;
+    height: min-content;
+  }
+
+  .information {
+    grid-column: 1/2;
+    width: 80%;
+  }
+
+  .information__contact {
+    grid-row: 1 /2;
+  }
+
+  .information__input-container {
+    align-items: center;
+    padding: 0.4rem 1rem;
+  }
+
+  .information__input {
+    height: 2rem;
+  }
+}
