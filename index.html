@@ -151,6 +151,7 @@
                 name="information__phone"
                 id="information__phone"
                 class="information__input"
+                title="Number must start with a zero and must be 10 numbers long"
                 placeholder="Enter your phone..."
                 pattern="^(?=^.{10,11}$)0\d*-?\d*$"
                 required />
@@ -221,16 +222,21 @@
               </label>
               <div class="information__input-container">
                 <i class="material-icons information__icon">flag</i>
-                <select
-                  name="information__country"
+                <input
+                  type="text"
                   id="information__country"
+                  name="information__country"
+                  title="Select country from pull down list"
                   class="information__input"
                   placeholder="Your country..."
-                  required>
-                  <option value="Netherlands">Netherlands</option>
-                  <option value="Germany">Germany</option>
-                  <option value="Belgium">Belgium</option>
-                </select>
+                  list="countries"
+                  required />
+
+                <datalist id="countries">
+                  <option label="Netherlands">Netherlands</option>
+                  <option label="Germany">Germany</option>
+                  <option label="Belgium">Belgium</option>
+                </datalist>
               </div>
             </div>
             <div class="information__container">
@@ -266,11 +272,17 @@
             </label>
           </div>
         </fieldset>
-        <fieldset class="information--btn">
+        <fieldset class="information__btn--btn">
           <input
             type="submit"
             value="Continue"
+            id="information__btn"
             class="information__btn" />
+          <div
+            id="information__message"
+            class="information__message information__message--hidden"
+            >Form has been submitted successfully.</div
+          >
         </fieldset>
       </form>
       <footer class="footer">created by username - devChallenges.io</footer>

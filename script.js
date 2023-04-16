@@ -53,4 +53,15 @@ function updateTotalPrice() {
   }),
 );
 
-// const form =
+const form = document.getElementById('form');
+const submitBtn = document.getElementById('information__btn');
+const message = document.getElementById('information__message');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  submitBtn.classList.toggle('information__btn--success');
+  message.classList.toggle('information__message--hidden');
+  var elements = form.elements;
+  for (var i = 0, len = elements.length; i < len; ++i) {
+    elements[i].disabled = true;
+  }
+});
